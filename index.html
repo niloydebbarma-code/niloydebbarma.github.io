@@ -1211,6 +1211,11 @@
         // --- INITIALIZATION ---
 
         window.addEventListener('DOMContentLoaded', () => {
+            // Redirect /index.html to /
+            if (window.location.pathname === '/index.html') {
+                window.location.href = '/';
+            }
+
             initNeuralBackground();
             
             const menuBtn = document.getElementById('menu-btn');
