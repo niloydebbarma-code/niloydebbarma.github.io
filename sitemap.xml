@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://niloydebbarma.work.gd/</loc>
+    <lastmod>2025-12-30T12:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Section Anchors -->
+  <url>
+    <loc>https://niloydebbarma.work.gd/#home</loc>
+    <lastmod>2025-12-30T12:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://niloydebbarma.work.gd/#about</loc>
+    <lastmod>2025-12-30T12:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://niloydebbarma.work.gd/#exp</loc>
+    <lastmod>2025-12-30T12:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://niloydebbarma.work.gd/#research</loc>
+    <lastmod>2025-12-30T12:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://niloydebbarma.work.gd/#academics</loc>
+    <lastmod>2025-12-30T12:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://niloydebbarma.work.gd/#impact</loc>
+    <lastmod>2025-12-30T12:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://niloydebbarma.work.gd/#projects</loc>
+    <lastmod>2025-12-30T12:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://niloydebbarma.work.gd/#recognition</loc>
+    <lastmod>2025-12-30T12:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://niloydebbarma.work.gd/#skills</loc>
+    <lastmod>2025-12-30T12:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://niloydebbarma.work.gd/#contact</loc>
+    <lastmod>2025-12-30T12:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Site Assets -->
+  <url>
+    <loc>https://niloydebbarma.work.gd/favicon.svg</loc>
+    <lastmod>2025-12-30T12:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://niloydebbarma.work.gd/robots.txt</loc>
+    <lastmod>2025-12-30T12:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://niloydebbarma.work.gd/sitemap.xsl</loc>
+    <lastmod>2025-12-30T12:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
+  </url>
+
+</urlset>

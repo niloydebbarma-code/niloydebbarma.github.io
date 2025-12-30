@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+<head>
+    <!-- Character Encoding & Viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Primary Meta Tags -->
+    <title>Niloy Deb Barma | AI Research Developer</title>
+    <meta name="title" content="Niloy Deb Barma | AI Research Developer & Data Scientist">
+    <meta name="description" content="Portfolio of Niloy Deb Barma, AI Research Developer specializing in GraphRAG, TPU Optimization, LLMs, and Open Source AI at The AI Alliance (Meta & IBM) and Cerebras Systems. Architecting the Neural Infrastructure of Tomorrow.">
+    <meta name="author" content="Niloy Deb Barma">
+    <meta name="keywords" content="Niloy Deb Barma, AI Research, GraphRAG, TPU, Cerebras, Meta AI, IBM Research, LLM Optimization, Data Science, Vel Tech">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="https://github.com/niloydebbarma-code.png">
+
+    <!-- Scripts & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Rajdhani', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              cyber: {
+                black: '#050505',
+                dark: '#08080a',
+                primary: '#00f0ff',
+                secondary: '#7000df',
+                accent: '#0F766E',
+                glass: 'rgba(255, 255, 255, 0.02)',
+                glassHover: 'rgba(255, 255, 255, 0.04)',
+                border: 'rgba(255, 255, 255, 0.08)',
+                dim: 'rgba(255, 255, 255, 0.4)',
+              }
+            },
+            animation: {
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'fade-in': 'fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards',
+              'slide-in': 'slideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards',
+              'bounce-in': 'bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards',
+              'slide-up': 'slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards',
+              'float': 'float 3s ease-in-out infinite',
+              'glow': 'glow 2s ease-in-out infinite alternate',
+            },
+            keyframes: {
+              fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+              slideIn: { '0%': { opacity: '0', transform: 'translateX(-20px)' }, '100%': { opacity: '1', transform: 'translateX(0)' } },
+              bounceIn: { '0%': { opacity: '0', transform: 'scale(0.3)' }, '50%': { opacity: '1', transform: 'scale(1.05)' }, '70%': { transform: 'scale(0.9)' }, '100%': { opacity: '1', transform: 'scale(1)' } },
+              slideUp: { '0%': { opacity: '0', transform: 'translateY(30px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+              float: { '0%, 100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-10px)' } },
+              glow: { '0%': { boxShadow: '0 0 5px rgba(0, 240, 255, 0.2)' }, '100%': { boxShadow: '0 0 20px rgba(0, 240, 255, 0.4), 0 0 30px rgba(0, 240, 255, 0.2)' } }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body { background-color: #050505; color: #e2e8f0; overflow-x: hidden; }
+      ::-webkit-scrollbar { width: 4px; }
+      ::-webkit-scrollbar-track { background: #050505; }
+      ::-webkit-scrollbar-thumb { background: #1a1a1a; }
+      ::-webkit-scrollbar-thumb:hover { background: #00f0ff; }
+      .writing-vertical-rl { writing-mode: vertical-rl; }
+      .scrollbar-hide::-webkit-scrollbar { display: none; }
+      .terminal-card { border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease; }
+      .terminal-card:hover { border-color: rgba(0,240,255,0.3); background: rgba(255,255,255,0.03); transform: translateY(-2px); }
+      .logo-box { filter: grayscale(1) brightness(0.9) contrast(1.1); transition: all 0.3s ease; }
+      .terminal-card:hover .logo-box { filter: grayscale(0) brightness(1) contrast(1); }
+      .scanline {
+        position: fixed; top: 0; left: 0; width: 100%; height: 2px;
+        background: rgba(0, 240, 255, 0.03); z-index: 100; pointer-events: none;
+        animation: scanline 10s linear infinite;
+      }
+      @keyframes scanline { 0% { top: 0% } 100% { top: 100% } }
+      
+      /* PDF Viewer States */
+      .pdf-viewer-fullscreen {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        z-index: 9999 !important;
+        background: #050505 !important;
+        overflow: hidden !important;
+      }
+      .pdf-viewer-fullscreen .bg-cyber-glass {
+        height: 100% !important;
+        border-radius: 0 !important;
+        border: none !important;
+        overflow: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 20px !important;
+      }
+      .pdf-viewer-fullscreen .flex.items-center.justify-between {
+        margin-bottom: 20px !important;
+      }
+      .pdf-viewer-fullscreen iframe {
+        flex: 1 !important;
+        min-height: 0 !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        border-radius: 8px !important;
+      }
+      
+      /* Browser Fullscreen API styles */
+      .pdf-viewer-browser-fullscreen {
+        background: #050505 !important;
+      }
+      .pdf-viewer-browser-fullscreen .bg-cyber-glass {
+        height: 100vh !important;
+        border-radius: 0 !important;
+        border: none !important;
+        overflow: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 20px !important;
+      }
+      .pdf-viewer-browser-fullscreen .flex.items-center.justify-between {
+        margin-bottom: 20px !important;
+      }
+      .pdf-viewer-browser-fullscreen iframe {
+        flex: 1 !important;
+        min-height: 0 !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        border-radius: 8px !important;
+      }
+      
+      /* Responsive fullscreen for mobile */
+      @media (max-width: 768px) {
+        .pdf-viewer-browser-fullscreen .bg-cyber-glass,
+        .pdf-viewer-fullscreen .bg-cyber-glass {
+          padding: 10px !important;
+        }
+        .pdf-viewer-browser-fullscreen .flex.items-center.justify-between,
+        .pdf-viewer-fullscreen .flex.items-center.justify-between {
+          margin-bottom: 10px !important;
+        }
+      }
+      
+      /* Mobile-first responsive improvements */
+      @media (max-width: 640px) {
+        .terminal-card {
+          padding: 1rem !important;
+        }
+        .logo-box {
+          width: 2.5rem !important;
+          height: 2.5rem !important;
+        }
+        .scanline {
+          display: none;
+        }
+      }
+      
+      /* Touch-friendly interactions */
+      @media (hover: none) and (pointer: coarse) {
+        .terminal-card:hover {
+          transform: none !important;
+        }
+        .terminal-card:active {
+          transform: scale(0.98) !important;
+        }
+      }
+      .pdf-viewer-minimized {
+        width: 60px !important;
+        height: 60px !important;
+        position: fixed !important;
+        bottom: 20px !important;
+        right: 20px !important;
+        z-index: 1000 !important;
+        cursor: pointer !important;
+      }
+      .pdf-viewer-minimized .bg-cyber-glass {
+        height: 100% !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      .pdf-viewer-minimized iframe,
+      .pdf-viewer-minimized h3,
+      .pdf-viewer-minimized .flex.items-center.justify-between {
+        display: none !important;
+      }
+      .pdf-viewer-minimized::before {
+        content: "📄";
+        font-size: 24px;
+        color: #00f0ff;
+      }
+
+      /* Mobile-only override (critical) */
+      @media (max-width: 768px) {
+        body {
+          overflow-y: auto;
+        }
+
+        #app-root,
+        main {
+          height: auto !important;
+          overflow: visible !important;
+        }
+
+        #pdf-viewer {
+          max-height: none !important;
+        }
+      }
+
+      @media (max-width: 768px) {
+        #pdf-viewer {
+          width: 100%;
+        }
+
+        #pdf-viewer .bg-cyber-glass {
+          min-height: 75vh;
+        }
+
+        #pdf-viewer iframe {
+          min-height: 65vh;
+          height: 65vh;
+        }
+      }
+
+
+    </style>
+    </style>
+</head>
+<body class="antialiased selection:bg-cyber-primary selection:text-black font-sans">
+    <div class="scanline"></div>
+    <canvas id="neural-bg" class="fixed top-0 left-0 w-full h-full -z-10 opacity-30"></canvas>
+
+    <!-- Mobile Navigation -->
+    <div class="md:hidden fixed top-0 w-full h-14 bg-cyber-black/95 backdrop-blur border-b border-cyber-border z-50 flex items-center justify-between px-4">
+        <span class="font-mono font-bold text-cyber-primary text-xs uppercase tracking-tighter">NDB.CORE.v4</span>
+        <button id="menu-btn" class="p-2 text-white hover:text-cyber-primary transition-colors">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+    </div>
+
+    <!-- Layout Container -->
+    <div class="flex min-h-screen pt-14 md:pt-0 overflow-x-hidden">
+        <!-- Navigation Sidebar -->
+        <nav id="sidebar" class="fixed md:relative top-14 md:top-0 left-0 w-full md:w-20 lg:w-24 h-[calc(100%-3.5rem)] md:h-full 
+             bg-cyber-black/98 md:bg-cyber-dark border-r border-cyber-border z-40 flex flex-col items-center py-4 md:py-6 gap-4 md:gap-6
+             transform -translate-x-full md:translate-x-0 transition-transform duration-300 overflow-y-auto md:overflow-visible">
+            
+            <div class="hidden md:flex w-10 h-10 rounded-lg bg-cyber-accent items-center justify-center text-white mb-6 animate-pulse-fast shadow-[0_0_15px_rgba(15,118,110,0.4)]">
+                <i data-lucide="shield-check" class="w-6 h-6"></i>
+            </div>
+
+            <div id="nav-items" class="flex flex-col gap-1 w-full px-4 md:px-0 md:items-center">
+                <!-- Nav items injected via JS -->
+            </div>
+
+            <div class="mt-auto hidden md:flex flex-col gap-5 text-cyber-dim items-center pb-6">
+                <a href="https://linkedin.com/in/niloydebbarmacpscr" target="_blank" class="hover:text-cyber-primary transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                <a href="https://github.com/niloydebbarma-code" target="_blank" class="hover:text-cyber-primary transition-colors"><i data-lucide="github" class="w-4 h-4"></i></a>
+                <div class="w-[1px] h-12 bg-cyber-border mt-2"></div>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 relative overflow-hidden bg-black/40 backdrop-blur-sm">
+            <div class="absolute inset-0 pointer-events-none opacity-[0.03]" style="background-image: radial-gradient(#fff 1px, transparent 0); background-size: 30px 30px;"></div>
+            <div id="app-root" class="w-full p-4 sm:p-6 md:p-8 lg:p-12 relative z-10">
+                <!-- Views injected here -->
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // --- DATA ARCHIVE ---
+        const PERSONAL = {
+            name: "Niloy Deb Barma",
+            tagline: "Architecting Neuro-Neural Infrastructure",
+            location: "Chennai, India / Remote",
+            github: "github.com/niloydebbarma-code",
+            linkedin: "linkedin.com/in/niloydebbarmacpscr",
+            resume: "https://github.com/niloydebbarma-code/niloydebbarma-code/raw/main/Niloy-Deb-Barma-Resume.pdf",
+            status: "PyData Global 2025 Impact Scholar"
+        };
+
+        const EXPERIENCE = [
+            {
+                role: "Developer (Contributor)",
+                org: "The AI Alliance (Meta & IBM)",
+                period: "July 2025 – Present",
+                logo: "https://avatars.githubusercontent.com/u/150073668?s=200&v=4",
+                tags: ["Meta", "IBM", "Neo4j", "GraphRAG"],
+                desc: "Leading Project AllyCat to engineer optimized GraphRAG systems for retrieval reasoning. Collaborating with researchers from IBM and Meta to mitigate hallucination in open-source RAG pipelines. Designed hybrid retrieval pipelines and analyzed citation grounding failures for open-source contribution."
+            },
+            {
+                role: "Cerebras Fellow",
+                org: "Cerebras Systems",
+                period: "Jan 2025 – Present",
+                logo: "https://upload.wikimedia.org/wikipedia/commons/1/15/Cerebras_logo.svg",
+                tags: ["HPC", "Wafer-Scale", "MLPerf"],
+                desc: "Conducting research on AI performance optimization using high-performance wafer-scale computing systems."
+            },
+            {
+                role: "AI Data Analyst",
+                org: "Excelerate (Saint Louis University)",
+                period: "July – Aug 2025",
+                logo: "https://api.badgr.io/public/issuers/4_q-8Wj2Qce6cDc1hO364Q/image",
+                tags: ["Data Viz", "Decision Science"],
+                desc: "Analyzed student data and developed visual dashboards to drive administrative decision-making."
+            },
+            {
+                role: "AI Intern",
+                org: "Connecting Dreams Foundation",
+                period: "Oct 2023 – Mar 2024",
+                logo: "",
+                tags: ["Healthcare", "Predictive ML"],
+                desc: "Developed a diabetes prediction model for social good initiatives."
+            }
+        ];
+
+        const RESEARCH = [
+            {
+                type: "Grant",
+                title: "Google TPU Research Cloud (TRC)",
+                period: "Oct 2024 – Present",
+                logo: "https://cdn.simpleicons.org/googlecloud/white",
+                link: "https://github.com/niloydebbarma-code/LORA-FINETUNING-BANGLASENTI-XLMR-GOOGLE-TPU",
+                desc: "Awarded research compute grant for Cloud TPU v3-8. Project: BanglaSenti (LoRA Fine-Tuning). Fine-tuned XLM-RoBERTa on 122,578 samples, improving accuracy from 44.4% to 80.7%."
+            },
+            {
+                type: "Talk",
+                title: "GraphRAG Implementation in the Allycat Open-Source Project",
+                period: "2025",
+                logo: "https://avatars.githubusercontent.com/u/66535477?s=200&v=4",
+                link: "https://www.airmeet.com/event/a360f6b0-bd8b-11f0-9be4-375c53bcf15c",
+                desc: "Speaker at PyData Global 2025 (Impact Scholar). Technical deep-dive on Knowledge Graphs for Enhanced Chatbot Intelligence."
+            },
+            {
+                type: "Publication",
+                title: "Explainable AI (XAI) in Healthcare",
+                period: "Oct 2024",
+                logo: "",
+                link: "https://doi.org/10.5281/zenodo.14677039",
+                desc: "Analysis of transparency mechanics in automated clinical decision support."
+            },
+            {
+                type: "Publication",
+                title: "How AI Can Help Detect Misinformation",
+                period: "2024",
+                logo: "",
+                link: "https://doi.org/10.5281/zenodo.14678289",
+                desc: "Analysis of AI's role in detecting misinformation."
+            }
+        ];
+
+        const IMPACT = [
+            {
+                role: "Founder",
+                org: "AI Youth Alliance",
+                period: "Mar 2024 – Present",
+                logo: "https://avatars.githubusercontent.com/u/188965596?s=400&v=4",
+                desc: "Associate member of the Open Mainframe Project (Linux Foundation). Leading global democratized AI education initiatives."
+            },
+            {
+                role: "Peer Helper (TeachNow)",
+                org: "Stanford University",
+                period: "Apr – Jun 2025",
+                logo: "https://upload.wikimedia.org/wikipedia/commons/5/56/Seal_of_Leland_Stanford_Junior_University.png",
+                desc: "Mentored 10+ students in the Code in Place program, supporting the Stanford curriculum delivery."
+            },
+            {
+                role: "Reviewer",
+                org: "AI and Ethics Journal (Springer Nature)",
+                period: "Oct 2024 – Present",
+                logo: "https://media.springernature.com/w316/springer-static/cover-hires/journal/43681?as=webp",
+                desc: "Peer reviewing research regarding algorithmic bias and ethical AI deployment for Springer Nature."
+            },
+            {
+                role: "Citizen Scientist",
+                org: "NASA Exoplanet Watch",
+                period: "Sept 2024 – Oct 2024",
+                logo: "https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg",
+                desc: "Collected and analyzed light curve data via Python to support exoplanet research."
+            }
+        ];
+
+        const PROJECTS = [
+            {
+                title: "AllyCat Project",
+                stack: "LangChain, Neo4j, Meta-AI",
+                link: "https://github.com/niloydebbarma-code/AllyCat",
+                desc: "GraphRAG implementation solving semantic drift in LLM retrieval."
+            },
+            {
+                title: "Movie Review Sentiment Analysis",
+                stack: "PyTorch, Transformers",
+                link: "https://github.com/niloydebbarma-code/Future-AWS-AI-Scientist",
+                desc: "Developed a binary sentiment classifier achieving 76.97% test accuracy on benchmark datasets."
+            },
+            {
+                title: "Image Classification with VGG16",
+                stack: "Transfer Learning",
+                link: "https://github.com/niloydebbarma-code/Udacity-Project-2-my-own-image-classifier",
+                desc: "Implemented transfer learning on a 102-class flower dataset, achieving 92.5% accuracy."
+            },
+            {
+                title: "Dog Breed Classification",
+                stack: "CNN, Computer Vision",
+                link: "https://github.com/niloydebbarma-code/Udacity-Use-a-Pre-trained-Image-Classifier-to-Identify-Dog-Breeds",
+                desc: "Built a model with 100% dog detection and 93.3% breed accuracy using VGG architecture."
+            },
+            {
+                title: "Free Image Generation Model",
+                stack: "Transformers",
+                link: "https://huggingface.co/aiyouthalliance/Free-Image-Generation-CC0",
+                desc: "Developed and released a free image generation model with a CC0 open license for public use."
+            },
+            {
+                title: "BanglaSenti (TPU Optimized)",
+                stack: "LoRA, TPU v3-8, XLM-R",
+                link: "https://github.com/niloydebbarma-code/LORA-FINETUNING-BANGLASENTI-XLMR-GOOGLE-TPU",
+                desc: "LoRA fine-tuning of XLM-RoBERTa-Base on BanglaSenti dataset using Google Cloud TPU v3-8, improving accuracy from 44.4% to 80.7%."
+            },
+            {
+                title: "AI Customer Support Agent",
+                stack: "Next.js, TypeScript, VAPI, Pinecone",
+                link: "https://github.com/niloydebbarma-code/AI-Customer-Support-Agent",
+                desc: "Automated customer support system with voice and chat capabilities for Aven customers."
+            },
+            {
+                title: "Learn-nanoGPT",
+                stack: "Python, PyTorch, NanoGPT",
+                link: "https://github.com/niloydebbarma-code/Learn-nanoGPT",
+                desc: "Educational implementation of nanoGPT for Shakespeare text generation with automatic hardware optimization and multi-format tokenization support."
+            },
+            {
+                title: "Diabetics Prediction",
+                stack: "Python, Scikit-learn, Jupyter",
+                link: "https://github.com/niloydebbarma-code/Diabetics-Prediction",
+                desc: "Machine learning project for predicting diabetes using various classification algorithms including KNN."
+            }
+        ];
+
+        const AWARDS = [
+            { title: "AWS AI & ML Scholarship (Future AI Scientist)", org: "Udacity", year: "2025", logo: "https://raw.githubusercontent.com/simple-icons/simple-icons/refs/heads/develop/icons/udacity.svg" },
+            { title: "Impact Scholar Award", org: "PyData Global", year: "2025", logo: "https://avatars.githubusercontent.com/u/66535477?s=200&v=4" },
+            { title: "Rank 27 National Ambassador", org: "National STEAM Olympiad", year: "2024", logo: "https://nationalsteamolympiad.com/assets/frontend/img/stem-logo.png" },
+            { title: "Bronze Honor", org: "IYMC (Math Challenge)", year: "2023", logo: "https://iymc.info/src/logo_white.png" },
+            { title: "Galaxy Cruise Recognition", org: "NAOJ", year: "2025", logo: "https://yt3.googleusercontent.com/gyiz2iubqAYiJdLUlGxstSs4lQbVJz-v-qS0C6L3Icgyla8MkvhXfUi5iTG8qxkf4Qx7fOAT=s160-c-k-c0x00ffffff-no-rj" },
+            { title: "Code in Place (Student & Peer Helper)", org: "Stanford University", year: "2025", logo: "https://upload.wikimedia.org/wikipedia/commons/5/56/Seal_of_Leland_Stanford_Junior_University.png" },
+            { title: "Code in Place (Experienced Student)", org: "Stanford University", year: "2024", logo: "https://upload.wikimedia.org/wikipedia/commons/5/56/Seal_of_Leland_Stanford_Junior_University.png" },
+            { title: "AWS AI & ML Scholarship (Python)", org: "Udacity & AWS", year: "2024", logo: "https://raw.githubusercontent.com/simple-icons/simple-icons/refs/heads/develop/icons/udacity.svg" },
+            { title: "REYES Research Mentee", org: "UC Berkeley", year: "2024", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a1/Seal_of_University_of_California%2C_Berkeley.svg" },
+            { title: "Machine Learning Specialization", org: "Stanford University & DeepLearning.AI", year: "2023", logo: "https://upload.wikimedia.org/wikipedia/commons/5/56/Seal_of_Leland_Stanford_Junior_University.png" },
+            { title: "Qualified Participant", org: "Chemical Metrology Olympiad", year: "2023", logo: "" },
+            { title: "Quarter-Finalist", org: "ClimateScience Olympiad", year: "2024", logo: "" }
+        ];
+
+        const SKILLS = {
+            "Languages": ["Python", "JavaScript", "Julia"],
+            "Cloud & Web": ["AWS", "Google Cloud (TPU)", "Docker", "FastAPI"],
+            "Frameworks & Libraries": ["PyTorch", "TensorFlow", "LangChain", "Transformers", "Scikit-learn"],
+            "Research Areas": ["Generative AI", "Natural Language Processing (NLP)", "Computer Vision", "Large Language Models (LLMs)"]
+        };
+
+        const SECTIONS = [
+            { id: 'home', label: 'Home', icon: 'home' },
+            { id: 'about', label: 'About', icon: 'user' },
+            { id: 'exp', label: 'Experience', icon: 'briefcase' },
+            { id: 'research', label: 'Research', icon: 'microscope' },
+            { id: 'academics', label: 'Academics', icon: 'graduation-cap' },
+            { id: 'impact', label: 'Leadership', icon: 'users' },
+            { id: 'projects', label: 'Projects', icon: 'cpu' },
+            { id: 'recognition', label: 'Awards', icon: 'award' },
+            { id: 'skills', label: 'Skills', icon: 'terminal' },
+            { id: 'contact', label: 'Contact', icon: 'send' }
+        ];
+
+        // --- RENDER ENGINE ---
+
+        const Title = (t, s) => `
+            <div class="mb-6 flex flex-col md:flex-row md:items-end justify-between border-b border-cyber-border pb-4">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-bold text-white tracking-tighter uppercase font-mono"><span class="text-cyber-primary opacity-50 mr-2">></span>${t}</h2>
+                    <p class="text-cyber-dim text-xs font-mono uppercase tracking-widest mt-1">// ${s}</p>
+                </div>
+                <div class="hidden md:block text-[10px] font-mono text-cyber-accent text-right">SECURE_NODE_4.2<br/>STATUS: VERIFIED</div>
+            </div>
+        `;
+
+        function renderHome() {
+            return `
+            <div class="flex flex-col lg:flex-row gap-4 lg:gap-8 animate-slide-in max-w-7xl mx-auto lg:min-h-[calc(100vh-6rem)]">
+                <!-- Main Content -->
+                <div class="flex-1 flex flex-col justify-center px-4 sm:px-6 lg:px-0">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-cyber-primary/10 border border-cyber-primary/20 text-cyber-primary text-[10px] font-mono uppercase tracking-[0.2em] mb-4 sm:mb-6 rounded animate-bounce-in">
+                        <span class="w-1.5 h-1.5 bg-cyber-primary rounded-full animate-pulse"></span>
+                        ${PERSONAL.status}
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tighter text-white leading-none mb-3 sm:mb-4 animate-slide-up" style="animation-delay: 0.2s">
+                        NILOY<br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-primary via-white to-cyber-secondary">DEB BARMA</span>
+                    </h1>
+                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-cyber-dim font-light leading-relaxed mb-6 sm:mb-8 max-w-2xl border-l border-cyber-accent/30 pl-4 sm:pl-6 animate-fade-in" style="animation-delay: 0.4s">
+                        ${PERSONAL.tagline}. Leading contributor at <span class="text-white">The AI Alliance</span>. Focused on <span class="text-cyber-primary">GraphRAG</span> and <span class="text-cyber-primary">TPU Performance Engineering</span>.
+                    </p>
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 animate-fade-in" style="animation-delay: 0.6s">
+                        <a href="#exp" class="px-6 sm:px-8 py-3 bg-cyber-primary text-black font-bold uppercase tracking-widest text-xs hover:brightness-110 transition-all duration-300 shadow-[0_0_20px_rgba(0,240,255,0.2)] hover:shadow-[0_0_30px_rgba(0,240,255,0.4)] transform hover:scale-105 animate-float text-center">Explore Interface</a>
+                        <a href="https://${PERSONAL.github}" target="_blank" class="px-6 sm:px-8 py-3 border border-cyber-border text-white hover:border-cyber-primary transition-all duration-300 text-xs uppercase font-mono tracking-widest bg-white/5 hover:bg-white/10 transform hover:scale-105 animate-float text-center" style="animation-delay: 0.1s">Repository</a>
+                    </div>
+                    <div class="mt-8 sm:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 animate-fade-in" style="animation-delay: 0.8s">
+                        <div class="p-3 sm:p-4 bg-cyber-glass border border-cyber-border rounded terminal-card transition-all duration-300 hover:bg-cyber-glass/80 hover:border-cyber-primary/50 transform hover:scale-105 animate-glow">
+                            <div class="text-cyber-dim text-[10px] font-mono uppercase mb-1">Compute Grant</div>
+                            <div class="text-white font-bold text-xs sm:text-sm uppercase">GCP TPU v3</div>
+                        </div>
+                        <div class="p-3 sm:p-4 bg-cyber-glass border border-cyber-border rounded terminal-card transition-all duration-300 hover:bg-cyber-glass/80 hover:border-cyber-primary/50 transform hover:scale-105 animate-glow" style="animation-delay: 0.1s">
+                            <div class="text-cyber-dim text-[10px] font-mono uppercase mb-1">Architecture</div>
+                            <div class="text-white font-bold text-xs sm:text-sm uppercase">GraphRAG</div>
+                        </div>
+                        <div class="p-3 sm:p-4 bg-cyber-glass border border-cyber-border rounded terminal-card transition-all duration-300 hover:bg-cyber-glass/80 hover:border-cyber-primary/50 transform hover:scale-105 animate-glow" style="animation-delay: 0.2s">
+                            <div class="text-cyber-dim text-[10px] font-mono uppercase mb-1">Designation</div>
+                            <div class="text-white font-bold text-xs sm:text-sm uppercase">Impact Scholar</div>
+                        </div>
+                         <div class="p-3 sm:p-4 bg-cyber-glass border border-cyber-border rounded terminal-card transition-all duration-300 hover:bg-cyber-glass/80 hover:border-cyber-primary/50 transform hover:scale-105 animate-glow" style="animation-delay: 0.3s">
+                            <div class="text-cyber-dim text-[10px] font-mono uppercase mb-1">Research</div>
+                            <div class="text-white font-bold text-xs sm:text-sm uppercase">Cerebras Fellow</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PDF Viewer Sidebar -->
+                <div id="pdf-viewer" class="w-full mt-8 lg:mt-0 lg:w-80 xl:w-96 2xl:w-[500px] flex flex-col lg:sticky lg:top-24 animate-fade-in pdf-viewer-normal" style="animation-delay: 1s">
+                    <div class="bg-cyber-glass border border-cyber-border rounded-lg p-4 flex flex-col lg:h-[70vh]">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <h3 class="text-cyber-primary font-mono text-sm uppercase tracking-wider">Resume Viewer</h3>
+                                <div class="flex items-center gap-2">
+                                    <button id="minimize-pdf" class="px-2 py-1 bg-cyber-dim text-white text-xs font-bold uppercase hover:bg-cyber-dim/80 transition-all duration-200 rounded hidden" title="Minimize">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 0 2-2h3M3 16h3a2 2 0 0 0 2 2v3"/>
+                                        </svg>
+                                    </button>
+                                    <button id="fullscreen-pdf" class="px-2 py-1 bg-cyber-primary text-black text-xs font-bold uppercase hover:brightness-110 transition-all duration-200 rounded" title="Fullscreen">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <a href="${PERSONAL.resume}" target="_blank" download class="px-3 py-1 bg-cyber-primary text-black text-xs font-bold uppercase hover:brightness-110 transition-all duration-200 rounded" title="Download PDF">
+                                Download
+                            </a>
+                        </div>
+                        <div class="flex-1 bg-black/50 rounded border border-cyber-border/50 overflow-visible">
+                            <iframe 
+                                src="https://docs.google.com/viewer?url=${encodeURIComponent(PERSONAL.resume)}&embedded=true" 
+                                class="w-full h-full border-0"
+                                title="Resume PDF"
+                                scrolling="auto"
+                            ></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+        }
+
+        function renderAbout() {
+            return `
+            <div class="h-full overflow-y-auto pr-2 sm:pr-4 scrollbar-hide animate-slide-in">
+                ${Title("About", "Personal Profile")}
+                <div class="space-y-6 sm:space-y-8 pb-8">
+                    <!-- Personal Introduction -->
+                    <div class="bg-cyber-glass border border-cyber-border p-6 sm:p-8 rounded terminal-card">
+                        <p class="text-cyber-dim font-mono text-sm mb-4"><span class="text-cyber-primary">></span> Loading personal profile...</p>
+                        <div class="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-white mb-4">Niloy Deb Barma</h3>
+                                <p class="text-gray-300 text-base leading-relaxed mb-4">
+                                    This space is for context, not conclusions. I'm in the process of learning and understanding, often revisiting basics and rethinking ideas as they unfold. My approach is gradual, shaped by time spent observing, reading, and working through questions that don't always have quick answers.
+                                </p>
+                                <p class="text-gray-400 text-sm leading-relaxed">
+                                    I don't see myself as fixed or defined. What's written here reflects a moment, not a final position. Things change as understanding changes, and that's part of the process I'm in.
+                                </p>
+                            </div>
+                            <div class="lg:w-64 space-y-4">
+                                <div class="bg-black/30 border border-cyber-border/50 p-4 rounded">
+                                    <div class="text-cyber-primary font-mono text-xs uppercase tracking-widest mb-2">Quick Facts</div>
+                                    <div class="space-y-2 text-sm">
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-400">Age:</span>
+                                            <span class="text-white">20</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-400">From:</span>
+                                            <span class="text-white">Bangladesh</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-400">Study in:</span>
+                                            <span class="text-white">India</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-400">Languages:</span>
+                                            <span class="text-white">Hindi, Bengali, English</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black/30 border border-cyber-border/50 p-4 rounded">
+                                    <div class="text-cyber-primary font-mono text-xs uppercase tracking-widest mb-2">What I Love</div>
+                                    <div class="space-y-1 text-xs text-gray-400">
+                                        <div>• AI & Machine Learning</div>
+                                        <div>• Open Source Projects</div>
+                                        <div>• Technical Writing</div>
+                                        <div>• Coffee-fueled coding</div>
+                                        <div>• Nature</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- My Journey -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+                        <div class="bg-cyber-glass border border-cyber-border p-6 sm:p-8 rounded terminal-card">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i data-lucide="route" class="w-6 h-6 text-cyber-primary"></i>
+                                <h3 class="text-cyber-primary font-mono text-sm uppercase tracking-widest">My Journey</h3>
+                            </div>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                I got into AI during my studies when I started learning about machine learning. It fascinated me how computers could learn patterns and make predictions. What began as classroom curiosity turned into a real passion for building AI systems.
+                            </p>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Through online courses, personal projects, and working with other developers, I've learned a lot about AI. Every challenge I face teaches me something new, and every project brings me closer to my goal of creating AI that actually helps people in their daily lives.
+                            </p>
+                        </div>
+                        <div class="bg-cyber-glass border border-cyber-border p-6 sm:p-8 rounded terminal-card">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i data-lucide="lightbulb" class="w-6 h-6 text-cyber-primary"></i>
+                                <h3 class="text-cyber-primary font-mono text-sm uppercase tracking-widest">Philosophy</h3>
+                            </div>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                I believe AI should be built responsibly and help everyone, not just a few people. Technology should make life easier and support human creativity, not replace it entirely.
+                            </p>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                I try to combine what I learn in theory with building real applications. I focus on open-source AI projects that anyone can use and improve. My aim is to connect academic research with practical tools that solve actual problems.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Core Values -->
+                    <div class="bg-cyber-glass border border-cyber-border p-6 sm:p-8 rounded terminal-card">
+                        <h3 class="text-cyber-primary font-mono text-lg uppercase tracking-widest mb-6 flex items-center gap-3">
+                            <i data-lucide="heart" class="w-6 h-6"></i>
+                            Core Values
+                        </h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <div class="p-4 bg-black/30 border border-cyber-border/50 rounded text-center">
+                                <i data-lucide="unlock" class="w-8 h-8 text-cyber-primary mx-auto mb-2"></i>
+                                <div class="text-cyber-primary font-mono text-xs uppercase tracking-widest mb-2">Open Source</div>
+                                <p class="text-gray-400 text-xs">Believing in collaborative development and knowledge sharing</p>
+                            </div>
+                            <div class="p-4 bg-black/30 border border-cyber-border/50 rounded text-center">
+                                <i data-lucide="shield" class="w-8 h-8 text-cyber-primary mx-auto mb-2"></i>
+                                <div class="text-cyber-primary font-mono text-xs uppercase tracking-widest mb-2">Ethics</div>
+                                <p class="text-gray-400 text-xs">Prioritizing responsible AI development and usage</p>
+                            </div>
+                            <div class="p-4 bg-black/30 border border-cyber-border/50 rounded text-center">
+                                <i data-lucide="users" class="w-8 h-8 text-cyber-primary mx-auto mb-2"></i>
+                                <div class="text-cyber-primary font-mono text-xs uppercase tracking-widest mb-2">Community</div>
+                                <p class="text-gray-400 text-xs">Building and supporting developer communities</p>
+                            </div>
+                            <div class="p-4 bg-black/30 border border-cyber-border/50 rounded text-center">
+                                <i data-lucide="infinity" class="w-8 h-8 text-cyber-primary mx-auto mb-2"></i>
+                                <div class="text-cyber-primary font-mono text-xs uppercase tracking-widest mb-2">Innovation</div>
+                                <p class="text-gray-400 text-xs">Constantly pushing boundaries and exploring new possibilities</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Beyond the Code -->
+                    <div class="bg-cyber-glass border border-cyber-border p-6 sm:p-8 rounded terminal-card">
+                        <h3 class="text-cyber-primary font-mono text-lg uppercase tracking-widest mb-6 flex items-center gap-3">
+                            <i data-lucide="smile" class="w-6 h-6"></i>
+                            Beyond the Code
+                        </h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="space-y-3">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="coffee" class="w-4 h-4 text-cyber-primary mt-1 flex-shrink-0"></i>
+                                    <p class="text-gray-400 text-sm">I run on coffee and curiosity - I can debug code or talk about AI ethics for hours with a good coffee.</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="book-open" class="w-4 h-4 text-cyber-primary mt-1 flex-shrink-0"></i>
+                                    <p class="text-gray-400 text-sm">I read a lot of sci-fi books and AI research papers - it's where imagination meets real technology.</p>
+                                </div>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="message-circle" class="w-4 h-4 text-cyber-primary mt-1 flex-shrink-0"></i>
+                                    <p class="text-gray-400 text-sm">I enjoy deep conversations about technology and mentoring people who are starting their AI journey.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+        }
+
+        function renderExp() {
+            return `
+            <div class="h-full overflow-y-auto pr-2 sm:pr-4 scrollbar-hide animate-slide-in">
+                ${Title("Experience", "Professional History & Core Contributions")}
+                <div class="space-y-4 sm:space-y-6 pb-8">
+                    ${EXPERIENCE.map(e => `
+                        <div class="terminal-card p-4 sm:p-6 md:p-8 rounded bg-cyber-glass flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 items-start">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 shrink-0 bg-white/5 rounded-lg p-2 flex items-center justify-center logo-box">
+                                ${e.logo ? `<img src="${e.logo}" class="max-w-full max-h-full object-contain" alt="${e.org}">` : `<i data-lucide="brain" class="w-6 h-6 sm:w-8 sm:h-8 text-cyber-primary"></i>`}
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex flex-col sm:flex-row justify-between mb-3 sm:mb-4">
+                                    <div class="min-w-0 flex-1">
+                                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-white tracking-wide break-words">${e.role}</h3>
+                                        <p class="text-cyber-primary font-mono text-xs uppercase mt-1 tracking-widest break-words">${e.org}</p>
+                                    </div>
+                                    <span class="text-[10px] font-mono bg-white/5 px-2 py-1 rounded text-cyber-dim uppercase tracking-tighter border border-white/5 mt-2 sm:mt-0 self-start shrink-0">${e.period}</span>
+                                </div>
+                                <p class="text-gray-400 text-sm leading-relaxed mb-3 sm:mb-4 break-words">${e.desc}</p>
+                                <div class="flex flex-wrap gap-2">
+                                    ${e.tags.map(t => `<span class="text-[9px] font-mono px-2 py-0.5 bg-black/40 border border-cyber-border text-cyber-dim uppercase tracking-widest whitespace-nowrap">${t}</span>`).join('')}
+                                </div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>`;
+        }
+
+        function renderResearch() {
+            return `
+            <div class="h-full overflow-y-auto pr-2 sm:pr-4 scrollbar-hide animate-slide-in">
+                ${Title("Research", "Grants, Speaker Credits & Publications")}
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 pb-8">
+                    ${RESEARCH.map(r => `
+                        <div class="terminal-card p-4 sm:p-6 md:p-8 rounded bg-cyber-glass flex flex-col h-full">
+                            <div class="flex justify-between items-start mb-4 sm:mb-6">
+                                <div class="w-10 h-10 sm:w-12 sm:h-12 bg-white/5 rounded p-2 flex items-center justify-center logo-box">
+                                    ${r.logo ? `<img src="${r.logo}" class="max-w-full max-h-full object-contain" alt="Institution">` : `<i data-lucide="${r.type === 'Publication' ? 'book-open' : 'microscope'}" class="w-6 h-6 sm:w-8 sm:h-8 text-cyber-primary"></i>`}
+                                </div>
+                                <span class="text-[9px] font-mono px-2 sm:px-3 py-1 bg-cyber-primary/10 text-cyber-primary border border-cyber-primary/20 rounded uppercase tracking-widest">${r.type}</span>
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4 break-words">${r.title}</h3>
+                            <p class="text-sm text-gray-400 mb-4 sm:mb-6 flex-1 border-l-2 border-cyber-border pl-3 sm:pl-4 leading-relaxed break-words">${r.desc}</p>
+                            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-auto pt-4 border-t border-cyber-border gap-2">
+                                <span class="text-[10px] font-mono text-cyber-dim uppercase tracking-widest">${r.period}</span>
+                                ${r.link ? `<a href="${r.link}" target="_blank" class="text-xs text-cyber-primary font-mono hover:underline flex items-center gap-1">Learn More <i data-lucide="external-link" class="w-3 h-3"></i></a>` : ''}
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>`;
+        }
+
+        function renderAcademics() {
+            return `
+            <div class="h-full overflow-y-auto pr-2 sm:pr-4 scrollbar-hide animate-slide-in">
+                ${Title("Academics", "Education & Academic Status")}
+                <div class="space-y-8 pb-8">
+                    <!-- Education Section -->
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-bold text-white tracking-tighter uppercase font-mono mb-4"><span class="text-cyber-primary opacity-50 mr-2">></span>Education</h3>
+                        <div class="space-y-6">
+                            <!-- High School -->
+                            <div class="terminal-card p-4 sm:p-6 rounded bg-cyber-glass">
+                                <div class="flex flex-col md:flex-row md:items-start gap-4">
+                                    <div class="flex-shrink-0">
+                                        <img src="http://cpscr.edu.bd/wp-content/uploads/elementor/thumbs/Logo-CPSCR-PNG-plur6tbjkfyv547a0q7o3wnulzyrhihxy1jka9iohc.png" alt="Cantonment Public School and College, Rangpur" class="w-12 h-12 rounded-lg bg-cyber-glass p-2">
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
+                                            <div>
+                                                <h4 class="text-lg font-bold text-white font-mono">Senior High School Diploma, Science</h4>
+                                                <p class="text-cyber-primary font-mono text-sm">Cantonment Public School and College, Rangpur</p>
+                                            </div>
+                                            <span class="text-cyber-dim font-mono text-xs mt-1 md:mt-0">Jan 2022 – Oct 2024</span>
+                                        </div>
+                                        <div class="flex flex-wrap gap-2 mb-3">
+                                            <span class="px-2 py-1 bg-cyber-primary/10 text-cyber-primary text-xs font-mono rounded">Leadership</span>
+                                            <span class="px-2 py-1 bg-cyber-primary/10 text-cyber-primary text-xs font-mono rounded">STEM</span>
+                                            <span class="px-2 py-1 bg-cyber-primary/10 text-cyber-primary text-xs font-mono rounded">Community Outreach</span>
+                                        </div>
+                                        <div class="mb-3">
+                                            <span class="inline-flex items-center gap-2 px-3 py-2 bg-cyber-primary/20 border border-cyber-primary/30 text-cyber-primary text-sm font-mono font-bold rounded">
+                                                <i data-lucide="star" class="w-4 h-4"></i>
+                                                Grade: 5.00/5.00
+                                            </span>
+                                        </div>
+                                        <p class="text-cyber-dim text-sm leading-relaxed">Class Captain, Campus Ambassador for multiple organizations. Coursework: Bangla, English, ICT, Physics, Chemistry, Biology, Mathematics.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- University -->
+                            <div class="terminal-card p-4 sm:p-6 rounded bg-cyber-glass">
+                                <div class="flex flex-col md:flex-row md:items-start gap-4">
+                                    <div class="flex-shrink-0">
+                                        <img src="https://www.veltech.edu.in/wp-content/uploads/2024/10/Logo.png" class="max-w-full max-h-full object-contain" alt="Vel Tech Logo" class="w-12 h-12 rounded-lg bg-cyber-glass p-2">
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
+                                            <div>
+                                                <h4 class="text-lg font-bold text-white font-mono">B.Tech Artificial Intelligence & Data Science</h4>
+                                                <p class="text-cyber-primary font-mono text-sm">Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology</p>
+                                            </div>
+                                            <span class="text-cyber-dim font-mono text-xs mt-1 md:mt-0">2025 – Expected 2029</span>
+                                        </div>
+                                        <div class="flex flex-wrap gap-2 mb-3">
+                                            <span class="px-2 py-1 bg-cyber-primary/10 text-cyber-primary text-xs font-mono rounded">AI & Data Science</span>
+                                            <span class="px-2 py-1 bg-cyber-primary/10 text-cyber-primary text-xs font-mono rounded">Engineering</span>
+                                            <span class="px-2 py-1 bg-cyber-primary/10 text-cyber-primary text-xs font-mono rounded">Research</span>
+                                        </div>
+                                        <p class="text-cyber-dim text-sm leading-relaxed">Currently pursuing B.Tech in Artificial Intelligence & Data Science with focus on machine learning, deep learning, and AI applications.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+        }
+
+        function renderImpact() {
+            return `
+            <div class="h-full overflow-y-auto pr-2 sm:pr-4 scrollbar-hide animate-slide-in">
+                ${Title("Leadership", "Community & Institutional Influence")}
+                <div class="grid gap-4 sm:gap-6 pb-8">
+                    ${IMPACT.map(i => `
+                        <div class="terminal-card p-4 sm:p-6 md:p-8 rounded bg-cyber-glass flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 items-center">
+                            <div class="w-16 h-16 sm:w-20 sm:h-20 shrink-0 bg-white/5 rounded-full p-3 sm:p-4 flex items-center justify-center logo-box overflow-hidden">
+                                <img src="${i.logo}" class="max-w-full max-h-full object-contain" alt="Org Logo">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-3 w-full">
+                                    <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-white break-words">${i.role}</h3>
+                                    <span class="text-[10px] font-mono text-cyber-dim uppercase tracking-widest mt-1 sm:mt-0 shrink-0">${i.period}</span>
+                                </div>
+                                <p class="text-cyber-accent text-xs sm:text-sm font-mono mb-3 sm:mb-4 uppercase tracking-widest font-bold break-words">${i.org}</p>
+                                <p class="text-sm text-gray-400 leading-relaxed break-words">${i.desc}</p>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>`;
+        }
+
+        function renderProjects() {
+            return `
+            <div class="h-full overflow-y-auto pr-2 sm:pr-4 scrollbar-hide animate-slide-in">
+                ${Title("Projects", "Technical Forge & Implementations")}
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 pb-8">
+                    ${PROJECTS.map(p => `
+                        <a href="${p.link}" target="_blank" class="terminal-card p-4 sm:p-6 md:p-8 rounded bg-cyber-glass group h-full flex flex-col">
+                            ${p.logo ? `<div class="w-10 h-10 sm:w-12 sm:h-12 bg-white/5 rounded p-2 flex items-center justify-center logo-box mb-3 sm:mb-4">
+                                <img src="${p.logo}" class="max-w-full max-h-full object-contain" alt="${p.title} Logo">
+                            </div>` : ''}
+                            <h3 class="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-cyber-primary transition-colors break-words">${p.title}</h3>
+                            <p class="text-[10px] font-mono text-cyber-accent mb-3 sm:mb-4 uppercase tracking-widest font-bold font-mono break-words">${p.stack || p.tech || ""}</p>
+                            <p class="text-sm text-gray-400 mb-6 sm:mb-8 flex-1 leading-relaxed break-words">${p.desc}</p>
+                            <div class="flex items-center gap-2 text-[10px] font-mono text-cyber-dim group-hover:text-white transition-colors border-t border-cyber-border pt-3 sm:pt-4">
+                                <i data-lucide="github" class="w-3 h-3"></i> Synchronize Source Archive
+                            </div>
+                        </a>
+                    `).join('')}
+                </div>
+            </div>`;
+        }
+
+        function renderRecognition() {
+            return `
+            <div class="h-full overflow-y-auto pr-2 sm:pr-4 scrollbar-hide animate-slide-in">
+                ${Title("Awards", "Verified Honors & Recognition Hall")}
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 pb-8">
+                    ${AWARDS.map(a => `
+                        <div class="p-4 sm:p-6 border border-cyber-border bg-cyber-glass rounded flex flex-col terminal-card">
+                            <div class="flex justify-between items-center mb-3 sm:mb-4">
+                                <div class="w-8 h-8 sm:w-10 sm:h-10 bg-white/5 rounded p-1.5 sm:p-2 flex items-center justify-center logo-box">
+                                    ${a.logo ? `<img src="${a.logo}" class="max-w-full max-h-full object-contain" alt="Badge">` : '<i data-lucide="award" class="w-5 h-5 sm:w-6 sm:h-6 text-cyber-primary"></i>'}
+                                </div>
+                                <span class="text-[10px] font-mono text-cyber-dim uppercase">${a.year}</span>
+                            </div>
+                            <h4 class="text-sm sm:text-base font-bold text-white leading-snug mb-2 break-words">${a.title}</h4>
+                            <span class="text-[10px] font-mono text-cyber-accent uppercase tracking-widest font-bold break-words">${a.org}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>`;
+        }
+
+        function renderSkills() {
+            return `
+            <div class="h-full overflow-y-auto pr-2 sm:pr-4 scrollbar-hide animate-slide-in">
+                ${Title("Skills", "Technical Protocols & Weaponry")}
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 pb-8">
+                    ${Object.entries(SKILLS).map(([cat, list]) => `
+                        <div class="animate-fade-in">
+                            <h3 class="text-xs font-mono text-cyber-primary uppercase tracking-[0.3em] sm:tracking-[0.4em] mb-4 sm:mb-6 border-l-2 border-cyber-primary pl-3 sm:pl-4 font-bold break-words">${cat}</h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                                ${list.map(s => `
+                                    <div class="flex items-center gap-2 sm:gap-3 p-3 sm:p-4 bg-white/5 border border-cyber-border text-xs sm:text-sm text-gray-300 font-mono group hover:bg-white/10 transition-all break-words">
+                                        <i data-lucide="chevron-right" class="w-3 h-3 text-cyber-accent group-hover:text-cyber-primary shrink-0"></i> <span class="break-words">${s}</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>`;
+        }
+
+        function renderContact() {
+            return `
+            <div class="h-full flex flex-col animate-slide-in max-w-4xl mx-auto justify-center px-4 sm:px-6 lg:px-0">
+                ${Title("Contact", "Initialize Secure Link")}
+                <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start lg:items-center">
+                    <div class="flex-1 bg-cyber-glass border border-cyber-border p-6 sm:p-8 md:p-10 rounded shadow-2xl relative overflow-hidden">
+                        <p class="text-sm text-cyber-dim font-mono mb-6 sm:mb-10 break-words"><span class="text-cyber-primary">></span> Neural link initialized. Enter designation and payload content.</p>
+                        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6 sm:space-y-8">
+                            <input type="hidden" name="access_key" value="cef59892-e240-414c-85d1-80b647a3f1b4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                                <input type="text" name="name" required placeholder="Designation // Name" class="bg-black/50 border border-cyber-border p-3 sm:p-4 text-white focus:border-cyber-primary focus:outline-none font-mono text-xs rounded transition-all">
+                                <input type="email" name="email" required placeholder="Frequency // Email" class="bg-black/50 border border-cyber-border p-3 sm:p-4 text-white focus:border-cyber-primary focus:outline-none font-mono text-xs rounded transition-all">
+                            </div>
+                            <textarea name="message" required rows="6" placeholder="Transmission Payload Content..." class="w-full bg-black/50 border border-cyber-border p-3 sm:p-4 text-white focus:border-cyber-primary focus:outline-none font-mono text-xs rounded resize-none transition-all"></textarea>
+                            <button type="submit" class="w-full py-4 sm:py-6 bg-cyber-primary/10 border border-cyber-primary text-cyber-primary font-bold uppercase tracking-[0.3em] sm:tracking-[0.4em] text-xs hover:bg-cyber-primary hover:text-black transition-all">Dispatch Transmission</button>
+                        </form>
+                    </div>
+                    <div class="lg:w-64 flex flex-col items-center lg:items-start gap-6">
+                        <p class="text-xs text-cyber-dim font-mono uppercase tracking-widest">Connect Across Dimensions</p>
+                        <div class="flex lg:flex-col gap-6 lg:gap-8">
+                            <a href="https://github.com/niloydebbarma-code" target="_blank" class="text-cyber-dim hover:text-cyber-primary transition-colors group">
+                                <div class="flex flex-col items-center gap-2">
+                                    <i data-lucide="github" class="w-8 h-8 group-hover:scale-110 transition-transform"></i>
+                                    <span class="text-xs font-mono uppercase tracking-widest">GitHub</span>
+                                </div>
+                            </a>
+                            <a href="https://linkedin.com/in/niloydebbarmacpscr" target="_blank" class="text-cyber-dim hover:text-cyber-primary transition-colors group">
+                                <div class="flex flex-col items-center gap-2">
+                                    <i data-lucide="linkedin" class="w-8 h-8 group-hover:scale-110 transition-transform"></i>
+                                    <span class="text-xs font-mono uppercase tracking-widest">LinkedIn</span>
+                                </div>
+                            </a>
+                            <a href="https://www.instagram.com/niloydebbarmacpscr/" target="_blank" class="text-cyber-dim hover:text-cyber-primary transition-colors group">
+                                <div class="flex flex-col items-center gap-2">
+                                    <i data-lucide="instagram" class="w-8 h-8 group-hover:scale-110 transition-transform"></i>
+                                    <span class="text-xs font-mono uppercase tracking-widest">Instagram</span>
+                                </div>
+                            </a>
+                            <a href="https://x.com/niloydebbarma" target="_blank" class="text-cyber-dim hover:text-cyber-primary transition-colors group">
+                                <div class="flex flex-col items-center gap-2">
+                                    <i data-lucide="twitter" class="w-8 h-8 group-hover:scale-110 transition-transform"></i>
+                                    <span class="text-xs font-mono uppercase tracking-widest">X</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+        }
+
+        // --- CORE NAVIGATION ENGINE ---
+
+        function renderNav() {
+            const container = document.getElementById('nav-items');
+            const current = window.location.hash || '#home';
+            
+            container.innerHTML = SECTIONS.map(s => {
+                const active = (current === '#' + s.id) || (current === '#home' && s.id === 'home');
+                return `
+                    <a href="#${s.id}" class="group relative flex items-center md:justify-center p-4 transition-all
+                       ${active ? 'text-cyber-primary bg-cyber-primary/10' : 'text-cyber-dim hover:text-white hover:bg-white/5'}">
+                        <i data-lucide="${s.icon}" class="w-5 h-5"></i>
+                        <span class="md:hidden ml-5 text-xs font-mono uppercase tracking-widest font-bold">${s.label}</span>
+                        <div class="hidden md:block absolute left-full ml-5 px-3 py-1 bg-cyber-primary text-black text-[10px] font-bold font-mono uppercase opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50 pointer-events-none">
+                            ${s.label}
+                        </div>
+                    </a>
+                `;
+            }).join('');
+            lucide.createIcons();
+        }
+
+        function router() {
+            const root = document.getElementById('app-root');
+            const hash = window.location.hash || '#home';
+            renderNav();
+            
+            switch(hash) {
+                case '#home': root.innerHTML = renderHome(); break;
+                case '#about': root.innerHTML = renderAbout(); break;
+                case '#exp': root.innerHTML = renderExp(); break;
+                case '#research': root.innerHTML = renderResearch(); break;
+                case '#academics': root.innerHTML = renderAcademics(); break;
+                case '#impact': root.innerHTML = renderImpact(); break;
+                case '#projects': root.innerHTML = renderProjects(); break;
+                case '#recognition': root.innerHTML = renderRecognition(); break;
+                case '#skills': root.innerHTML = renderSkills(); break;
+                case '#contact': root.innerHTML = renderContact(); break;
+                default: root.innerHTML = renderHome();
+            }
+            
+            lucide.createIcons();
+            
+            // Close mobile menu
+            const sidebar = document.getElementById('sidebar');
+            if(window.innerWidth < 768) sidebar.classList.add('-translate-x-full');
+        }
+
+        // --- BACKGROUND SYNAPTIC VISUALS ---
+
+        function initBG() {
+            const canvas = document.getElementById('neural-bg');
+            const ctx = canvas.getContext('2d');
+            let w, h, dots = [];
+            
+            function resize() {
+                w = canvas.width = window.innerWidth;
+                h = canvas.height = window.innerHeight;
+                dots = Array.from({length: 40}, () => ({
+                    x: Math.random() * w, y: Math.random() * h,
+                    vx: (Math.random()-0.5)*0.3, vy: (Math.random()-0.5)*0.3
+                }));
+            }
+            
+            function draw() {
+                ctx.clearRect(0,0,w,h);
+                dots.forEach(d => {
+                    d.x += d.vx; d.y += d.vy;
+                    if(d.x<0 || d.x>w) d.vx *= -1;
+                    if(d.y<0 || d.y>h) d.vy *= -1;
+                    ctx.fillStyle = 'rgba(0, 240, 255, 0.4)';
+                    ctx.beginPath(); ctx.arc(d.x, d.y, 1.2, 0, Math.PI*2); ctx.fill();
+                    dots.forEach(d2 => {
+                        const dist = Math.hypot(d.x-d2.x, d.y-d2.y);
+                        if(dist < 180) {
+                            ctx.strokeStyle = `rgba(0, 240, 255, ${0.1 * (1 - dist/180)})`;
+                            ctx.lineWidth = 0.5;
+                            ctx.beginPath(); ctx.moveTo(d.x, d.y); ctx.lineTo(d2.x, d2.y); ctx.stroke();
+                        }
+                    });
+                });
+                requestAnimationFrame(draw);
+            }
+            
+            window.addEventListener('resize', resize);
+            resize(); draw();
+        }
+
+        // --- INITIALIZATION ---
+
+        function setupPDFViewerControls() {
+            const pdfViewer = document.getElementById('pdf-viewer');
+            const fullscreenBtn = document.getElementById('fullscreen-pdf');
+            const minimizeBtn = document.getElementById('minimize-pdf');
+            
+            if (!pdfViewer || !fullscreenBtn || !minimizeBtn) return;
+            
+            // Function to enter fullscreen
+            const enterFullscreen = async () => {
+                try {
+                    if (pdfViewer.requestFullscreen) {
+                        await pdfViewer.requestFullscreen();
+                    } else if (pdfViewer.webkitRequestFullscreen) { // Safari
+                        await pdfViewer.webkitRequestFullscreen();
+                    } else if (pdfViewer.msRequestFullscreen) { // IE/Edge
+                        await pdfViewer.msRequestFullscreen();
+                    }
+                } catch (error) {
+                    console.log('Fullscreen not supported or failed:', error);
+                    // Fallback to CSS fullscreen
+                    pdfViewer.classList.add('pdf-viewer-fullscreen');
+                    fullscreenBtn.classList.add('hidden');
+                    minimizeBtn.classList.remove('hidden');
+                }
+            };
+            
+            // Function to exit fullscreen
+            const exitFullscreen = async () => {
+                try {
+                    if (document.exitFullscreen) {
+                        await document.exitFullscreen();
+                    } else if (document.webkitExitFullscreen) { // Safari
+                        await document.webkitExitFullscreen();
+                    } else if (document.msExitFullscreen) { // IE/Edge
+                        await document.msExitFullscreen();
+                    }
+                } catch (error) {
+                    console.log('Exit fullscreen failed:', error);
+                    // Fallback to CSS fullscreen exit
+                    pdfViewer.classList.remove('pdf-viewer-fullscreen');
+                    pdfViewer.classList.add('pdf-viewer-normal');
+                    minimizeBtn.classList.add('hidden');
+                    fullscreenBtn.classList.remove('hidden');
+                }
+            };
+            
+            // Handle fullscreen change events
+            const handleFullscreenChange = () => {
+                const isFullscreen = document.fullscreenElement || 
+                                   document.webkitFullscreenElement || 
+                                   document.msFullscreenElement;
+                
+                if (isFullscreen === pdfViewer) {
+                    // Entered fullscreen
+                    pdfViewer.classList.add('pdf-viewer-browser-fullscreen');
+                    fullscreenBtn.classList.add('hidden');
+                    minimizeBtn.classList.remove('hidden');
+                } else {
+                    // Exited fullscreen
+                    pdfViewer.classList.remove('pdf-viewer-browser-fullscreen');
+                    pdfViewer.classList.add('pdf-viewer-normal');
+                    minimizeBtn.classList.add('hidden');
+                    fullscreenBtn.classList.remove('hidden');
+                }
+            };
+            
+            // Add fullscreen change listeners
+            document.addEventListener('fullscreenchange', handleFullscreenChange);
+            document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+            document.addEventListener('msfullscreenchange', handleFullscreenChange);
+            
+            fullscreenBtn.addEventListener('click', enterFullscreen);
+            minimizeBtn.addEventListener('click', exitFullscreen);
+            
+            // Click on minimized viewer to restore
+            pdfViewer.addEventListener('click', (e) => {
+                if (pdfViewer.classList.contains('pdf-viewer-minimized')) {
+                    pdfViewer.classList.remove('pdf-viewer-minimized');
+                    pdfViewer.classList.add('pdf-viewer-normal');
+                    minimizeBtn.classList.add('hidden');
+                    fullscreenBtn.classList.remove('hidden');
+                    e.stopPropagation();
+                }
+            });
+            
+            // Exit fullscreen on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && (document.fullscreenElement === pdfViewer || 
+                                          document.webkitFullscreenElement === pdfViewer ||
+                                          document.msFullscreenElement === pdfViewer ||
+                                          pdfViewer.classList.contains('pdf-viewer-fullscreen'))) {
+                    exitFullscreen();
+                }
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            initBG();
+            document.getElementById('menu-btn').addEventListener('click', () => {
+                document.getElementById('sidebar').classList.toggle('-translate-x-full');
+            });
+            window.addEventListener('hashchange', () => {
+                router();
+                // Setup PDF controls after routing
+                setTimeout(setupPDFViewerControls, 100);
+            });
+            router();
+            // Setup PDF controls on initial load
+            setTimeout(setupPDFViewerControls, 100);
+        });
+    </script>
+</body>
+</html>
